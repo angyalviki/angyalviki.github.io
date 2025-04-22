@@ -10,8 +10,9 @@ a:link {
 /* Mouse over link */
 a:hover {
     text-decoration: none;  /* Disable default link style */
-    color: rgba(255, 255, 255, 0.175); /* Set link color to grey if hovered */
+    color: black /* Set link color to grey if hovered */
   }
+
 
 a:visited {
   color: white; /* Avoid making links for visited pages violet */
@@ -32,7 +33,7 @@ h1 {
 h2 {
     font-family: "roc-grotesk", sans-serif;
     font-weight: 500;
-    font-size: 35px;
+    font-size: 3vw;
     color:white;
 }
 
@@ -40,17 +41,18 @@ h2 {
 h3 {
     font-family: "roc-grotesk", sans-serif;
     font-weight: 500;
-    font-size: 26px;
+    font-size: 2.8vw;
     color:white;
 }
 
 /* Base font size and color for the entire body */
 body {
-    font-size: 26px; 
+    font-size: 2vw; 
     background-color: #000000; 
     color: #ffffff;
     font-family: "roc-grotesk", sans-serif; 
     font-weight: 300;
+    line-height: 1.25;
 }
 
 /* HEADER WITH LOGO AND NAVIGATION*/
@@ -86,8 +88,8 @@ body {
 .header a {
     text-decoration: none;
     color: #ffffff; 
-    font-weight: bold; 
-    font-size: 13px;
+
+    font-size: 1.5vw; 
 }
 
 /* Setting a different style for the active link */
@@ -116,10 +118,30 @@ body {
     margin-bottom: 80px;
 }
 
+
+/* STYLES FOR THE WORKS ON THE HOME PAGE*/
+.landing-menu {
+    position: fixed;
+    bottom: 10px;
+    left: 30px;
+    line-height: 1.1;
+  }
+  
+  .landing-menu a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+    font-size: 12vw; /* Responsive sizing */
+  }
+
+  a:hover {
+    color: black;
+  }
 /* STYLES FOR THE WORKS ON THE HOME PAGE*/
 .work-container {
     display: flex; /*Set length to flexible */
-    margin-bottom: 80px;
+    margin-bottom: 15%;
     align-items: center; /* Center items vertically */
 }
 
@@ -147,8 +169,8 @@ body {
     display: flex; /* Making the item flexible */
     margin-left: 20px; /* Adding margins around the container*/
     margin-right: 20px;
-    margin-top: 80px;
-    margin-bottom: 60px;      
+    margin-top: 12%;
+    margin-bottom: 12%;      
 }
 
 /* Style for the title of the description title */
@@ -175,7 +197,7 @@ body {
 
 /*Adding space after the lst image on every page*/
 .lastimage {
-    margin-bottom: 50px;
+    margin-bottom: 5%;
 }
 
 /* IMAGE SETTINGS FOR WORK4 */
@@ -186,14 +208,14 @@ body {
     max-width: 60%; /* Max 60% of the window size*/
     align-items: right; /* Align images to the right*/
     margin-left: auto; /* Auto lft margin to align images to the right*/
-    margin-bottom: 60px;
+    margin-bottom: 12%;
 }
 
 /* Setting properties for the images on the left */
 .leftaligned {
     display: flex; /* Making the item flexible */
     align-items: left; /*Aligning to the left*/
-    margin-bottom: 60px; /*Adding margins*/
+    margin-bottom: 12%;
     margin-left:50px;
 }
 
@@ -208,7 +230,7 @@ body {
     display: flex; /* Making the item flexible */
     justify-content: center; /* Horizontal centering */
     margin-top: 100px;
-    margin-bottom: 100px;;
+    margin-bottom: 12%;
 }
 
 /* Setting properties for the images on the center */
@@ -223,7 +245,7 @@ body {
     align-items: center; /* Vertical centering */
     justify-content: center; /* Horizontal centering */
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 12%;
 }
 
 /* Setting properties for the other image on the center */
@@ -235,8 +257,7 @@ body {
 /* STYLES FOR THE CONTENT IN THE ABOUT PAGE*/
 .about-container {
     display: flex;  /* Making the item flexible */
-    margin: 20px; /* Adjust margin as needed */
-    margin-bottom: 80px;
+    margin-bottom: 12%;
     align-items: center; /* Center items vertically */
 }
 
@@ -244,13 +265,13 @@ body {
 .about-text {
     flex: 1;  /* Making the item flexible */
     padding: 20px; /* Adding space around the text */
-    margin-left: 10%;  /* Adding a margin bethween the image and the text */
+    max-width: 50%; /* Setting a maximum width */
+
 }
 
  /* Properties for the image on the about page */
 .about-image {
     flex: 1;  /* Making the item flexible */
-    height: 500px; /* Set the height of the container */
     max-width: 35%; /* Setting a maximum width */
 }
 
@@ -292,5 +313,8 @@ body {
 
 /* STYLES FOR THE CONTACT PAGE*/
 .contacts {
-    text-align: center;
+    margin-bottom: 80px;
+    align-items: center; /* Center items vertically */
+    flex: 1;  /* Making the item flexible */
+    padding: 20px; /* Adding space around the text */
 }
