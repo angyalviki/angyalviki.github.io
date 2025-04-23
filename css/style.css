@@ -47,13 +47,14 @@ h3 {
 
 /* Base font size and color for the entire body */
 body {
-    font-size: 2vw; 
+    font-size: 1.5vw; 
     background-color: #000000; 
     color: #ffffff;
     font-family: "roc-grotesk", sans-serif; 
     font-weight: 300;
     line-height: 1.25;
 }
+
 
 /* HEADER WITH LOGO AND NAVIGATION*/
 .header {
@@ -66,7 +67,7 @@ body {
 
 /* Logo image */
 .header img{
-    width: 16%; /* Setting a percentage so it scales with the window */
+    width: 12%; /* Setting a percentage so it scales with the window */
     height: auto; /* Auto height so the logo stays proportional */
 }
 
@@ -88,7 +89,6 @@ body {
 .header a {
     text-decoration: none;
     color: #ffffff; 
-
     font-size: 1.5vw; 
 }
 
@@ -261,12 +261,12 @@ body {
     align-items: center; /* Center items vertically */
 }
 
+
  /* Properties for the text on the about page */
 .about-text {
     flex: 1;  /* Making the item flexible */
     padding: 20px; /* Adding space around the text */
     max-width: 50%; /* Setting a maximum width */
-
 }
 
  /* Properties for the image on the about page */
@@ -318,3 +318,38 @@ body {
     flex: 1;  /* Making the item flexible */
     padding: 20px; /* Adding space around the text */
 }
+
+/* Ensure minimum font size of 16px on smaller screens */
+@media (max-width: 1000px) {
+    body {
+      font-size: 14px;
+    }
+    .header a {
+        font-size: 12px; 
+    }
+   
+    h3 {
+        font-size: 16px;
+    }
+    .header img{
+        width: 100px; /* Setting a percentage so it scales with the window */
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+} 
+
+@media (max-width: 600px) {
+
+    .about-text {
+        max-width: 100%; /* Allow full width on mobile */
+        padding: 20px; /* Optional: adjust padding for better spacing */
+      }
+
+
+} 
+
+
+
