@@ -24,17 +24,18 @@ h1 {
     font-family: "roc-grotesk", sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 70px;
+    font-size: 10vw;
     color:white;
-    text-align: center; /* Align thext to center */
+    text-align: left; /* Align thext to center */
 }
 
 /* Font style for the titles in the work pages */
 h2 {
     font-family: "roc-grotesk", sans-serif;
     font-weight: 500;
-    font-size: 3vw;
+    font-size: 2.5vw;
     color:white;
+    text-align: left; /* Align thext to center */
 }
 
 /* Font style for the undertitle */
@@ -43,16 +44,18 @@ h3 {
     font-weight: 500;
     font-size: 2.8vw;
     color:white;
+    text-align: left; /* Align thext to center */
 }
 
 /* Base font size and color for the entire body */
 body {
-    font-size: 1.5vw; 
+    font-size: 1.8vw; 
     background-color: #000000; 
     color: #ffffff;
     font-family: "roc-grotesk", sans-serif; 
     font-weight: 300;
     line-height: 1.25;
+    text-align: left; /* Align thext to center */
 }
 
 
@@ -98,26 +101,6 @@ body {
 }
 
 
-/* STYLES FOR THE HEADER IMAGES*/
-.top-page-container {
-    max-width: 100%;
-    max-height: 600px;
-    margin: 0 auto; /* Center the container horizontally */
-    overflow: hidden; /* Ensure the image doesn't overflow the container */
-}
-
-.top-page-container img {
-    width: 100%; /*Making sure that the image fill the container fully */
-    height: 100%;
-    object-fit: contain; /* Maintain aspect ratio and fit the image within the container */
-}
-
-/* STYLE FOR THE PAGE TITLES*/
-.page-title {
-    margin-top: 100px; /* Adding space before and after the title*/
-    margin-bottom: 80px;
-}
-
 
 /* STYLES FOR THE WORKS ON THE HOME PAGE*/
 .landing-menu {
@@ -138,6 +121,34 @@ body {
   a:hover {
     color: black;
   }
+
+
+/* STYLES FOR THE WORKS ON THE HOME PAGE*/
+.page-title {
+    padding: 20px; /*Adding space around the text*/
+    text-align: center; /* Centering the text*/
+    margin-top: 10%;
+  }
+  
+  
+/* STYLES FOR THE WORKS ON THE HOME PAGE*/
+.landing-menu-small {
+    position: fixed;
+    bottom: 10px;
+    left: 30px;
+    line-height: 1.1;
+  }
+  
+  .landing-menu-small a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+    font-size: 5vw; /* Responsive sizing */
+  }
+
+
+
 /* STYLES FOR THE WORKS ON THE HOME PAGE*/
 .work-container {
     display: flex; /*Set length to flexible */
@@ -181,6 +192,18 @@ body {
 
 /* Style for the title of the description text */
 .project-description {
+    flex: 2; /* Making the item flexible, giving it 2x as much space */
+    text-align: left; /* Aligning the text to the left */
+}
+
+.project-first-text-container {
+    display: flex; /* Making the item flexible */
+    margin-left: 20px; /* Adding margins around the container*/
+    margin-right: 20px;
+    margin-bottom: 12%;      
+    width: 70%;
+}
+.project-first-description {
     flex: 2; /* Making the item flexible, giving it 2x as much space */
     text-align: left; /* Aligning the text to the left */
 }
@@ -319,8 +342,116 @@ body {
     padding: 20px; /* Adding space around the text */
 }
 
+/* Base style for work links */
+.work-link {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    padding: 10px 20px; /* Add padding to make sure the background image appears around the link */
+    z-index: 1;  /* Ensures the link text is above the pseudo-element */
+}
+
+
+
+
+.landing-menu-small {
+    position: fixed;
+    bottom: 10px;
+    left: 30px;
+    line-height: 1.1;
+  }
+
+  .landing-menu-small a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+    font-size: vw; /* Responsive sizing */
+  }
+
+
+  
+  /* Each link wrapper */
+  .landing-menu-small .work-item {
+    position: relative;
+    margin: 20px 0;
+    overflow: hidden;
+  }
+  
+  /* Background that fades in */
+  .landing-menu-small .work-item::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 0;
+    pointer-events: none; /* Let the link be clickable */
+    background-image: var(--hover-image);
+  }
+  
+  /* Fade in on hover */
+  .landing-menu-small .work-item:hover::before {
+    opacity: 0.3;
+  }
+  
+  /* Link text styling */
+  .work-link {
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-size: 3vw;
+    font-weight: 900;
+    text-decoration: none;
+  }
+  
+  .work-link:hover {
+    color: black;
+  }
+  
+
+/* Cursor Image Style */
+#cursor {
+    position: fixed;
+    right: 20px;  /* Align the image to the right side of the screen */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30%;  /* Set the width to 700px */
+    height: auto;  /* Maintain the aspect ratio */
+    pointer-events: none; /* Ensures the cursor image doesn't interfere with other elements */
+    opacity: 0; /* Start with the cursor image invisible */
+    display: block; /* Make sure the image is in the flow */
+    transition: opacity 0.3s ease-in-out; /* Smooth fade-in and fade-out */
+    z-index: 9999; /* Ensure the image is on top of all other elements */
+}
+
+
+/* Default link style */
+a:link {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+/* Mouse over link */
+a:hover {
+    color: black;
+}
+
+
+
+
+
 /* Ensure minimum font size of 16px on smaller screens */
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
     body {
       font-size: 14px;
     }
@@ -336,7 +467,7 @@ body {
     }
 
     h2 {
-        font-size: 16px;
+        font-size: 14px;
     }
 
 } 
@@ -350,6 +481,3 @@ body {
 
 
 } 
-
-
-
