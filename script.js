@@ -6,10 +6,10 @@ const links = document.querySelectorAll('.work-link');
 
 // Define the images for each link
 const linkImages = {
-    '1–Print': 'assets/images/koerper30.jpg',  // Image for "Print" link
-    '2–Digital': 'assets/images/soundcamp-colors.png',  // Image for "Digital" link
-    '3–Example 1': 'assets/images/work1.jpg',  // Image for "Example 1" link
-    '4–Example 2': 'assets/images/work2.png',  // Image for "Example 2" link
+    '1–BIP': 'assets/images/broschuere-scan-small.jpg',  // Image for "Print" link
+    '2–Reflexionswerkstatt': 'assets/images/reflexionsw-plakat.jpg',  // Image for "Digital" link
+    '3–Resonating Selves': 'assets/images/resonating03.jpg',  // Image for "Example 1" link
+    '4–Epic Escxpe': 'assets/images/epic04.jpg', // Image for "Example 2" link
 };
 
 // Show the cursor image when hovering over links
