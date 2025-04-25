@@ -27,6 +27,7 @@ h1 {
     font-size: 10vw;
     color:white;
     text-align: left; /* Align thext to center */
+    margin-bottom: 10px; /* Decrease the space below the title */
 }
 
 /* Font style for the titles in the work pages */
@@ -114,7 +115,7 @@ body {
     display: block;
     text-decoration: none;
     color: white;
-    font-weight: 900;
+    font-weight: 500;
     font-size: 12vw; /* Responsive sizing */
   }
 
@@ -127,7 +128,6 @@ body {
 .page-title {
     padding: 20px; /*Adding space around the text*/
     text-align: center; /* Centering the text*/
-    margin-top: 10%;
   }
   
   
@@ -143,7 +143,7 @@ body {
     display: block;
     text-decoration: none;
     color: white;
-    font-weight: 900;
+    font-weight: 500;
     font-size: 5vw; /* Responsive sizing */
   }
 
@@ -218,6 +218,29 @@ body {
     max-width:100%;
 }
 
+
+.projectimage-rightaligned {
+    display: flex;
+    justify-content: flex-end; /* This pushes the image to the right */
+    margin-bottom: 12%;   
+}
+
+.projectimage-rightaligned img {
+    max-height: 80vh;
+    max-width: 100%
+}
+
+/* Centered image for the project page */
+.projectimage-center-max {
+    align-items: center; /* Centering */
+}
+
+/* Setting properties for the image in the container */
+.projectimage-center-max img {
+    width:100%;
+}
+
+
 /*Adding space after the lst image on every page*/
 .lastimage {
     margin-bottom: 5%;
@@ -239,26 +262,27 @@ body {
     display: flex; /* Making the item flexible */
     align-items: left; /*Aligning to the left*/
     margin-bottom: 12%;
-    margin-left:50px;
+    margin-left: 60px;
 }
 
 /* Setting properties for the images on the left */
 .leftaligned img {
     max-height: 600px; /* Setting a max height for the image */
-    width: auto; /* For keeping the ratio */
+    max-width: 60%; /* For keeping the ratio */
+    
 }
+
 
 /* Setting properties for the centered images */
 .centered {
     display: flex; /* Making the item flexible */
     justify-content: center; /* Horizontal centering */
-    margin-top: 100px;
     margin-bottom: 12%;
 }
 
 /* Setting properties for the images on the center */
 .centered img {
-    max-height: 300px; 
+    max-height: 100vh; 
     width: auto;
 }
 
@@ -342,19 +366,6 @@ body {
     padding: 20px; /* Adding space around the text */
 }
 
-/* Base style for work links */
-.work-link {
-    position: relative;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    padding: 10px 20px; /* Add padding to make sure the background image appears around the link */
-    z-index: 1;  /* Ensures the link text is above the pseudo-element */
-}
-
-
-
 
 .landing-menu-small {
     position: fixed;
@@ -367,7 +378,7 @@ body {
     display: block;
     text-decoration: none;
     color: white;
-    font-weight: 900;
+    font-weight: 500;
     font-size: vw; /* Responsive sizing */
   }
 
@@ -405,7 +416,6 @@ body {
     z-index: 1;
     color: white;
     font-size: 3vw;
-    font-weight: 900;
     text-decoration: none;
   }
   
@@ -469,6 +479,15 @@ a:hover {
     h2 {
         font-size: 14px;
     }
+    .projectimage-double {
+        max-width: 100%; /* Max 60% of the window size*/
+    }
+
+    .projectimage-left img{
+        width: 60%;
+    }
+
+
 
 } 
 
@@ -479,5 +498,10 @@ a:hover {
         padding: 20px; /* Optional: adjust padding for better spacing */
       }
 
+     .project-first-text-container
+    {
+        width: calc(100% - 50px);
+    }
 
 } 
+
